@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<a href="{% url home %}" >Back</a>
+	<p>
+	{% for tweet in zombie.tweetss.all %}
+	    	<div>
+	    		Status: {{tweet.status}} 
+	    	</div>
+	    	{% endfor %}
+	</p>
+</body>
+</html>

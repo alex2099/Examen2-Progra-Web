@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Zombie</title>
+</head>
+<body>
+	<div>Zombies list</div>
+	<hr/>
+	{% for zombie in zombies %}
+	<div>
+		<h3> {{ zombie.name_zombie }} </h3> 
+		<h3> Cementery --> {{ zombie.cementery }} </h3>
+	    <div class="Tweet">
+	    	{% for tweet in zombie.tweetss.all %}
+	    	<div>Tweets--> {{ tweet.status }}</div>
+	    	{% endfor %}
+	    </div>
+	</div>
+	{% endfor %}
+</body>
+</html>
